@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AMI TALENT is a community initiative in Kigali, Rwanda, helping people discover, showcase and grow their talents. No Talent Should Be Left Behind.">
+  <meta name="theme-color" content="#164e70">
+  <title>AMI TALENT | No Talent Should Be Left Behind</title>
+  <style>
+    :root {
+      --blue:#164e70; --bright-blue:#1686b5; --gold:#f2c14e;
+      --green:#3b9565; --ink:#183344; --muted:#607582;
+      --paper:#f5f9fb; --white:#fff; --line:#e2ebef;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{color:inherit}
+    .topline{height:6px;background:linear-gradient(90deg,var(--blue) 0 34%,var(--gold) 34% 67%,var(--green) 67%)}
+    header{background:rgba(255,255,255,.96);position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+    .nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;letter-spacing:1.5px;color:var(--blue);font-size:1.25rem;text-decoration:none}
+    .brand span{color:var(--gold)}
+    nav{display:flex;gap:17px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{text-decoration:none;font-size:.9rem;font-weight:700;color:var(--muted)}
+    nav a:hover{color:var(--bright-blue)}
+    .wrap{max-width:1120px;margin:auto;padding:0 22px}
+    .hero{background:linear-gradient(125deg,#164e70,#1686b5);color:white;padding:86px 0 78px;overflow:hidden}
+    .hero-inner{max-width:1120px;margin:auto;padding:0 22px;display:grid;grid-template-columns:1.35fr .65fr;gap:35px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:.78rem;font-weight:800;color:#ffe29a}
+    h1{font-size:clamp(2.7rem,7vw,5.2rem);line-height:1.02;margin:14px 0 18px;letter-spacing:-2px}
+    .hero p{font-size:1.12rem;max-width:640px;color:#eaf6fb}
+    .hero-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:28px;border-radius:24px}
+    .hero-card strong{display:block;font-size:1.5rem;line-height:1.25;margin-bottom:12px}
+    .hero-card p{font-size:.98rem;margin:0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+    .btn{display:inline-block;padding:12px 19px;border-radius:999px;text-decoration:none;font-weight:800;background:var(--gold);color:#243744}
+    .btn.outline{background:transparent;border:1px solid rgba(255,255,255,.8);color:white}
+    section{padding:68px 0}
+    .section-head{max-width:720px;margin-bottom:28px}
+    .kicker{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:.75rem}
+    h2{color:var(--blue);font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;margin:8px 0 12px}
+    .lead{color:var(--muted);font-size:1.05rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:white;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 8px 25px rgba(22,78,112,.045)}
+    .card h3{margin:8px 0;color:var(--blue)}
+    .symbol{font-size:1.8rem}
+    .card p{margin:0;color:var(--muted)}
+    .soft{background:#edf5f8}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .quote{background:var(--blue);color:white;border-radius:22px;padding:32px}
+    .quote blockquote{font-size:clamp(1.4rem,3vw,2rem);line-height:1.3;font-weight:800;margin:0 0 15px}
+    .quote p{color:#dcecf3;margin:0}
+    .notice{background:#fff8e5;border-left:4px solid var(--gold);padding:17px 19px;border-radius:10px;color:#5d4a1c}
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .step{background:white;border:1px solid var(--line);border-radius:16px;padding:20px}
+    .step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);font-weight:900;color:var(--blue)}
+    .step h3{color:var(--blue);margin:12px 0 5px}
+    .step p{margin:0;color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .placeholder{min-height:155px;border:2px dashed #b8cbd5;border-radius:17px;background:linear-gradient(135deg,#eaf3f7,#fff);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;color:var(--muted)}
+    .placeholder b{font-size:1.8rem;color:var(--bright-blue)}
+    .contact-panel{background:linear-gradient(120deg,#164e70,#1686b5);color:white;border-radius:24px;padding:32px}
+    .contact-panel h2{color:white}
+    .contact-panel p{color:#e6f3f8}
+    footer{background:#123c56;color:#dceaf0;padding:30px 0}
+    footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer p{margin:4px 0;font-size:.9rem}
+    .small{font-size:.86rem;color:var(--muted)}
+    @media(max-width:760px){
+      .nav{align-items:flex-start;flex-direction:column}
+      nav{justify-content:flex-start;gap:12px}
+      .hero{padding:60px 0}
+      .hero-inner,.two{grid-template-columns:1fr}
+      .grid,.steps,.gallery{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:480px){.grid,.steps,.gallery{grid-template-columns:1fr}section{padding:52px 0}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home">AMI <span>TALENT</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#talents">Talents</a><a href="#showcase">Showcase</a>
+        <a href="#grow">Grow</a><a href="#support">Support</a><a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">A community initiative · Kigali, Rwanda</div>
+          <h1>Every talent<br>deserves a chance.</h1>
+          <p>AMI TALENT is a home for different passions, abilities and creative journeys. We want to help people discover their potential, share what they do and find opportunities to grow.</p>
+          <div class="actions">
+            <a class="btn" href="#join">Share your talent</a>
+            <a class="btn outline" href="#support">Support the initiative</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <strong>No Talent Should Be Left Behind.</strong>
+          <p>Discover. Showcase. Grow.<br>Different passions. Different paths. Equal opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Who we are</div>
+          <h2>A place where talent belongs.</h2>
+          <p class="lead">AMI TALENT is a community initiative based in Kigali, Rwanda. It aims to create space for people to present their abilities, celebrate progress and connect with people who believe in their potential.</p>
+        </div>
+        <div class="two">
+          <article class="card"><div class="symbol">🌱</div><h3>Our mission</h3><p>To encourage people to recognise their abilities, showcase their work and access useful guidance and connections.</p></article>
+          <article class="card"><div class="symbol">🌍</div><h3>Our vision</h3><p>A community where talent is valued, opportunities are shared and people are encouraged to keep improving.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="talents">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Many paths, one community</div>
+          <h2>What is your talent?</h2>
+          <p class="lead">AMI TALENT welcomes different interests and abilities. You do not need to fit into just one category.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="symbol">🏸</div><h3>Sports</h3><p>Badminton, basketball, fencing, padel and other sports.</p></article>
+          <article class="card"><div class="symbol">💃</div><h3>Dance & performance</h3><p>Dance, acting, stage performance and movement.</p></article>
+          <article class="card"><div class="symbol">🎵</div><h3>Music</h3><p>Singing, instruments, songwriting and musical creativity.</p></article>
+          <article class="card"><div class="symbol">🎨</div><h3>Arts & design</h3><p>Drawing, painting, photography, fashion and design.</p></article>
+          <article class="card"><div class="symbol">🎬</div><h3>Digital creativity</h3><p>Video, content creation, editing and digital projects.</p></article>
+          <article class="card"><div class="symbol">✨</div><h3>Other talents</h3><p>Have a different skill or passion? There is room for it too.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Stories in action</div>
+          <h2>Talent showcase</h2>
+          <p class="lead">This space is reserved for approved photos and videos from training, events, performances, competitions and community activities.</p>
+        </div>
+        <div class="gallery">
+          <div class="placeholder"><b>＋</b><strong>Training moments</strong><span class="small">Photos will be added here</span></div>
+          <div class="placeholder"><b>＋</b><strong>Events & competitions</strong><span class="small">Photos will be added here</span></div>
+          <div class="placeholder"><b>＋</b><strong>Creative work</strong><span class="small">Photos and videos will be added here</span></div>
+        </div>
+        <p class="small" style="margin-top:14px">Profiles and media will only be published after review and permission. Personal phone numbers and home addresses will not be displayed.</p>
+      </div>
+    </section>
+
+    <section class="soft" id="grow">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Keep learning</div>
+          <h2>Grow your skills, one step at a time.</h2>
+          <p class="lead">A few reminders for anyone developing a talent.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="symbol">🎯</div><h3>Set a small goal</h3><p>Choose one skill to improve and practise it consistently.</p></article>
+          <article class="card"><div class="symbol">📝</div><h3>Learn from feedback</h3><p>Listen to helpful advice, ask questions and notice your progress.</p></article>
+          <article class="card"><div class="symbol">🤝</div><h3>Find your community</h3><p>Learn with others, encourage one another and celebrate effort.</p></article>
+        </div>
+        <div class="quote" style="margin-top:22px">
+          <blockquote>“Your beginning does not decide how far you can go.”</blockquote>
+          <p>Keep showing up. Keep learning. Give your talent room to grow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">What's happening</div>
+          <h2>Events & activities</h2>
+          <p class="lead">Updates about workshops, training sessions, showcases and community events will be shared here as they are confirmed.</p>
+        </div>
+        <div class="notice"><strong>Coming soon:</strong> Event announcements and activity highlights will appear here. Dates and details will only be posted once confirmed.</div>
+      </div>
+    </section>
+
+    <section class="soft" id="support">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Be part of the journey</div>
+          <h2>Help talent move forward.</h2>
+          <p class="lead">Supporters, mentors, volunteers and organisations can help create more opportunities for talented people.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="symbol">🎒</div><h3>Equipment & resources</h3><p>Help people access the tools and materials they need to practise.</p></article>
+          <article class="card"><div class="symbol">🚌</div><h3>Training & event support</h3><p>Explore ways to support participation, transport or learning opportunities.</p></article>
+          <article class="card"><div class="symbol">🌟</div><h3>Mentorship & partnerships</h3><p>Share knowledge, volunteer time or build a meaningful partnership.</p></article>
+        </div>
+        <p class="small" style="margin-top:16px">Support is subject to availability and agreement. AMI TALENT does not promise funding, equipment or opportunities to every applicant.</p>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div class="kicker" style="color:#ffe29a">Take your first step</div>
+          <h2>Let us discover what you can do.</h2>
+          <p>Want to share your talent, suggest an activity, volunteer, mentor or discuss supporting AMI TALENT? Get in touch to learn about the next steps.</p>
+          <div class="actions">
+            <a class="btn" href="#join">Contact details coming soon</a>
+          </div>
+          <p class="small" style="color:#e6f3f8;margin-top:16px">A dedicated organisation email and private registration form will be connected before public launch. Please do not send sensitive personal information in an ordinary email.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div><strong>AMI TALENT</strong><p>No Talent Should Be Left Behind.</p></div>
+      <div><p>Kigali, Rwanda</p><p>Discover. Showcase. Grow.</p></div>
+      <div><p>© <span id="year"></span> AMI TALENT</p><p class="small" style="color:#c7dbe5">A community initiative.</p></div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
